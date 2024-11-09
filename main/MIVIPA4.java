@@ -26,6 +26,7 @@ class Node implements Comparable<Node> {
 
 // priority queue to keep track of max heap
 class PriorityQueue {
+    priva
 
     public PriorityQueue(Node[] nodes, int size) {
         buildHeap(nodes, size);
@@ -69,6 +70,16 @@ class PriorityQueue {
         }
     }
 
+    static void printHeap()
+    {
+        System.out.println(
+            "Array representation of Heap is:");
+ 
+        for (int i = 0; i < N; ++i)
+            System.out.print(.ch + " " + arr[i].freq + " ");
+ 
+        System.out.println();
+    }
 }
 
 
@@ -116,7 +127,10 @@ public class MIVIPA4 {
     // file write huffman code book
 
     public static void main(String[] args) throws IOException {
-        
+        Node[] nodes = readTextFile();
+
+        PriorityQueue pq = new PriorityQueue(nodes, 27);
+        pq.printHeap()
         
     }
 
